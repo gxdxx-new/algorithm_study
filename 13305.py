@@ -1,6 +1,6 @@
 import sys
 
-input = sys.stdin.readline()
+input = sys.stdin.readline
 
 N = int(input())
 
@@ -15,6 +15,6 @@ minCost = cost[0]
 for i in range(0, N-1):
     if(minCost > cost[i]):
         minCost = cost[i]
-    result += minCost * distance[i]
+    result += (minCost * distance[i])
 
 print(result)
