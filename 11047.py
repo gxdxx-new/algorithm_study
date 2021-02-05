@@ -1,12 +1,15 @@
-N = int(input())
-P = list(map(int,input().split()))
-min_time = 0
-time = 0
+N,K=map(int,input().split())
 
-P.sort()
+array=[0]*N
+count=0
 
-for i in P:
-    min_time += (time+i)
-    time += i
+for i in range(0,N):
+    array[i]=int(input())
 
-print(min_time)
+array.reverse()
+
+for j in array:
+    count += K//j
+    K = K%j
+
+print(count)
