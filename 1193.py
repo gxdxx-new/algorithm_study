@@ -11,7 +11,7 @@ while True:
         break
 
 location1 = int(num - (count * (count - 1)) / 2)
-location2 = int(count - location + 1)
+location2 = int(count - location1 + 1)
 
 if(count % 2 == 0):
     print(str(location1) + '/' + str(location2))
