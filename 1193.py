@@ -1,18 +1,20 @@
 import sys
 
-X = int(sys.stdin.readline())
+num = int(sys.stdin.readline())
+count = 1
+location = 0
 
-i = 1
-count = 0
 while True:
-    if(X > (i*(i+1))/2):
-        i += 1
+    if(num > (count * (count + 1)) / 2):
+        count += 1
     else:
         break
 
-count = X - (i*(i-1))/2
-a = i - count + 1
-if(i%2 == 0):
-    print(str(int(count)) + '/' + str(int(a)))
-if(i%2 != 0):
-    print(str(int(a)) + '/' + str(int(count)))
+location1 = int(num - (count * (count - 1)) / 2)
+location2 = int(count - location + 1)
+
+if(count % 2 == 0):
+    print(str(location1) + '/' + str(location2))
+
+if(count % 2 != 0):
+    print(str(location2) + '/' + str(location1))
