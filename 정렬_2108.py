@@ -5,10 +5,10 @@ N = int(sys.stdin.readline())
 numList = []
 for _ in range(N):
     numList.append(int(sys.stdin.readline()))
-numList.sort()
 
-avg = sum(numList) // len(numList)
+avg = round(sum(numList) / len(numList))
 print(avg)
+numList.sort()
 
 if(N == 1):
     median = numList[0]
